@@ -1,0 +1,414 @@
+.page {
+  padding: 24px;
+  background: #eef3fb;
+  min-height: 100vh;
+}
+
+.heroCard,
+.formHeroCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  padding: 28px 30px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #1f3f97 0%, #244aa8 55%, #2f57b3 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 45px rgba(32, 63, 151, 0.16);
+  margin-bottom: 18px;
+}
+
+.heroLeft {
+  flex: 1;
+}
+
+.heroEyebrow {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.heroTitle {
+  margin: 0 0 8px;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.heroSubtitle {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 720px;
+  opacity: 0.95;
+}
+
+.heroStats {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.statCard {
+  min-width: 150px;
+  padding: 18px 18px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+}
+
+.statLabel {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+  opacity: 0.95;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.toolbarCard,
+.filterCard,
+.tableCard,
+.formCard {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(25, 48, 95, 0.08);
+  margin-bottom: 18px;
+}
+
+.toolbarCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.toolbarLeft {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.dangerBtn,
+.exportBtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.primaryBtn {
+  background: #244aa8;
+  color: #ffffff;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(36, 74, 168, 0.22);
+}
+
+.secondaryBtn {
+  background: #edf2ff;
+  color: #1f3f97;
+}
+
+.secondaryBtn:hover {
+  background: #e3ebff;
+}
+
+.dangerBtn {
+  background: #fdeaea;
+  color: #c62828;
+}
+
+.dangerBtn:hover {
+  background: #f9dede;
+}
+
+.primaryBtn:disabled,
+.secondaryBtn:disabled,
+.dangerBtn:disabled,
+.exportBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
+.exportWrap {
+  position: relative;
+}
+
+.exportBtn {
+  background: #edf2ff;
+  color: #1f3f97;
+  min-width: 170px;
+}
+
+.exportBtn:hover {
+  background: #e3ebff;
+}
+
+.caret {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.exportMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(22, 39, 80, 0.16);
+  border: 1px solid #e8eefb;
+  padding: 8px;
+  z-index: 50;
+}
+
+.exportMenu button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #284068;
+  cursor: pointer;
+}
+
+.exportMenu button:hover {
+  background: #f3f7ff;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.filterGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 14px;
+}
+
+.searchInput,
+.selectInput,
+.fieldGroup input,
+.fieldGroup select,
+.fieldGroup textarea {
+  width: 100%;
+  border: 1px solid #d7e0f1;
+  background: #fbfcff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #1f2f4d;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.searchInput:focus,
+.selectInput:focus,
+.fieldGroup input:focus,
+.fieldGroup select:focus,
+.fieldGroup textarea:focus {
+  border-color: #8ea9ea;
+  box-shadow: 0 0 0 4px rgba(54, 103, 214, 0.08);
+  background: #ffffff;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 980px;
+}
+
+.table thead th {
+  background: #f4f7fd;
+  color: #284068;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+  padding: 14px 14px;
+  border-bottom: 1px solid #e4ebf7;
+}
+
+.table tbody td {
+  padding: 14px 14px;
+  border-bottom: 1px solid #eef2fa;
+  font-size: 14px;
+  color: #334766;
+  background: #ffffff;
+}
+
+.table tbody tr {
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.table tbody tr:hover td {
+  background: #f8fbff;
+}
+
+.rowSelected td {
+  background: #eef4ff !important;
+}
+
+.checkboxCol {
+  width: 52px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: #1f3f97;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.emptyState {
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #41597f;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldGroup label {
+  color: #284068;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fieldGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #eaf0fb;
+}
+
+@media (max-width: 1100px) {
+  .heroCard,
+  .formHeroCard {
+    flex-direction: column;
+  }
+
+  .heroStats {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .filterGrid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbarCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbarLeft {
+    width: 100%;
+  }
+
+  .exportWrap {
+    width: 100%;
+  }
+
+  .exportBtn {
+    width: 100%;
+  }
+
+  .exportMenu {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px;
+  }
+
+  .heroCard,
+  .formHeroCard,
+  .toolbarCard,
+  .filterCard,
+  .tableCard,
+  .formCard {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .statCard {
+    min-width: 130px;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .formActions button {
+    width: 100%;
+  }
+}

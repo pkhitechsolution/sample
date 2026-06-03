@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reports PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #1e293b;
+        }
+        h1 {
+            margin-bottom: 6px;
+        }
+        .meta {
+            margin-bottom: 16px;
+            color: #64748b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reports</h1>
+    <div class="meta">Generated at: {{ generated_at }}</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Prepared By</th>
+                <th>Report Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in reports %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.get_report_type_display }}</td>
+                <td>{{ item.category }}</td>
+                <td>{{ item.get_status_display }}</td>
+                <td>{{ item.prepared_by }}</td>
+                <td>{{ item.report_date }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7">No reports found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

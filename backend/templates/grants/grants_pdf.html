@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #222;
+        }
+        h2 {
+            margin-bottom: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #cfcfcf;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #f2f4f8;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ title }}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Grant Name</th>
+                <th>Type</th>
+                <th>Funding Agency</th>
+                <th>Requested</th>
+                <th>Approved</th>
+                <th>Status</th>
+                <th>Applied Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in grants %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.grant_name }}</td>
+                <td>{{ item.grant_type }}</td>
+                <td>{{ item.funding_agency }}</td>
+                <td>{{ item.amount_requested }}</td>
+                <td>{{ item.amount_approved }}</td>
+                <td>{{ item.status }}</td>
+                <td>{{ item.applied_date }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8">No grants found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

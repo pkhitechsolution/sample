@@ -1,0 +1,179 @@
+.page {
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+  border: 1px solid #dbe8ff;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #173b8f;
+}
+
+.subtitle {
+  margin: 0;
+  color: #4c648f;
+  font-size: 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dbe4f3;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(16, 43, 95, 0.05);
+}
+
+.card span {
+  display: block;
+  font-size: 13px;
+  color: #607291;
+  margin-bottom: 6px;
+}
+
+.card strong {
+  font-size: 24px;
+  color: #163b8f;
+}
+
+.formCard,
+.tableCard {
+  background: #fff;
+  border: 1px solid #dbe4f3;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(16, 43, 95, 0.05);
+}
+
+.formHeader,
+.tableHeader {
+  margin-bottom: 14px;
+}
+
+.formHeader h2,
+.tableHeader h2 {
+  margin: 0;
+  color: #173b8f;
+  font-size: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.formGrid input,
+.formGrid select,
+.formGrid textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ced8ea;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.formGrid textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.editBtn,
+.deleteBtn {
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #173b8f 0%, #3276f3 100%);
+  color: #fff;
+}
+
+.secondaryBtn {
+  background: #eef3ff;
+  color: #173b8f;
+}
+
+.editBtn {
+  background: #eef3ff;
+  color: #173b8f;
+}
+
+.deleteBtn {
+  background: #ffe9e9;
+  color: #b42318;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e6edf7;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table th {
+  color: #173b8f;
+  background: #f8fbff;
+}
+
+.rowActions {
+  display: flex;
+  gap: 8px;
+}
+
+.emptyCell {
+  text-align: center;
+  color: #6b7b98;
+  padding: 18px;
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
